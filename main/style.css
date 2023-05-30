@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Russo+One&display=swap');
 body{
+   
     background: linear-gradient(to bottom left, blue, pink);
     font-family: 'Bebas Neue', cursive;
     font-size: 32px;
@@ -11,6 +12,7 @@ h2{
     text-align: center;
 }
 #btn{
+    position: relative;
     margin-left: 400px;
     margin-top: 250px;
     width: 250px;
@@ -21,6 +23,7 @@ h2{
     cursor: pointer;
 }
 #btn2{
+    position: relative;
     width: 250px;
     height: 100px;
     margin-left: 900px;
@@ -33,5 +36,6 @@ h2{
     cursor: pointer;
 }
 #container2{
+     position: relative;
     margin-top: -74px;
 }

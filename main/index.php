@@ -45,10 +45,16 @@
             </div>
         </form>
        
-      
+        <div id="href1">
+            <a href = "readerText.php">Skip text reg</a>
+            </div>
+            <div id="href2">
+            <a href = "readerSerialize.php">Skip serialize reg</a>
+            </div>
+            <script src="app.js"></script>
+            
     </div>
-    <script src="app.js"></script>
-    
+ 
 
 </body>
 </html>

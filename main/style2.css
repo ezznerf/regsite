@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Russo+One&display=swap');
+
+body{
+    background-color: cornflowerblue;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 32px;
+    font-family: 'Russo One', sans-serif;
+}
+.border{
+    position: relative;
+    background-color:lavender;
+    border-width:4px;
+    border-color: black;
+    border-style: solid;
+    width: 600px;
+    height: 170px;
+    text-align: center;
+    margin: auto;
+    margin-top: -20px;
+}
+#btn{
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 30px;
+}
+#button{
+    width: 175px;
+    height: 75px;
+    border-radius: 15px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    font-size: 25px;
+    cursor: pointer;
+    border-width: 4px;
+    border-color: black;
+    margin-bottom: -50px;
+}

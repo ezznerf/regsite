@@ -1,16 +1,51 @@
 <?
-class ViewTextUsers 
+require_once ("ViewInterface.php");
+class ViewTextUsers implements ViewInterface 
 {
-    private string $filename;
-    public function __construct(string $filename){
-        $this -> filename = $filename;
+    private string $dirname;
+    public function __construct(string $dirname){
+        $this -> dirname = $dirname;
+    }
+    public function TextReader(){
+        $files = scandir($this -> dirname);
+        foreach ($files as $v){
+            echo "<br>";
+            if ($v !="." && $v !=".."){
+                $file = file($this -> dirname.$v);
+                echo "<div class = 'border'";
 
+                foreach($file as $val){
+                    echo $val. "<br>";
+                    if (stristr($val, '@')){
+                        echo "<br>";
+                        echo "</div>";
+                    }
+                }
+            }
+        }
+    }
+    public function SerialReader(){
+        $files = scandir($this -> dirname);
+        foreach ($files as $v){
+            echo "<br>";
+            if ($v !="." && $v !=".."){
+                $file = file($this -> dirname.$v);
+                echo "<div class = 'border'";
+
+                foreach($file as $val){
+                    echo unserialize($val). "<br>";
+                    if (stristr($val, '@')){
+                        echo "<br>";
+                        echo "</div>";
+                    }
+                }
+            }
+        }
+    }
+    public function Cout(){
 
     }
-    public function Reader(){
-        $file = file("../base" .$this->filename);
-        foreach ($file as $value) {
-            
-        }
+    public function getDirname(){
+        return $this -> dirname;
     }
 }

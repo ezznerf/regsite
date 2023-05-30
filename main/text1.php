@@ -10,7 +10,7 @@
 </head>
 <body>
     <?php
-    require_once("SaveToTextBase.php");
+    require_once("../app/SaveToTextBase.php");
     $newPerson = new SaveToTextBase();
     $newPerson -> writeToBase();
     ?>
@@ -24,7 +24,7 @@
         </form>
     </div>
     <div id="container2">
-        <form action="">
+        <form action="reader.php">
             <button id="btn2">Все пользователи</button>
         </form>
     </div>

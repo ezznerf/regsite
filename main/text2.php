@@ -24,7 +24,7 @@
         </form>
     </div>
     <div id="container2">
-        <form action="">
+        <form action="readerSerialize.php">
             <button id="btn2">Все пользователи</button>
         </form>
     </div>

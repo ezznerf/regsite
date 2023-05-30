@@ -11,7 +11,7 @@ class SaveToSerializeBase extends AbstractSaver
     public function writeToBase()
     {
         $basename = "../base/serial/".$this -> email. ".txt";  
-        $text = serialize($this -> name) ."\n" . serialize($this -> bday) . "\n".  serialize($this -> pnumber) . "\n" . serialize($this ->email) . "\n";   
+        $text = "\n".serialize($this -> name) ."\n" . serialize($this -> bday) . "\n".  serialize($this -> pnumber) . "\n" . serialize($this ->email) . "\n";   
         $base = fopen($basename, "w");
         fwrite($base, $text);
         fclose($base);

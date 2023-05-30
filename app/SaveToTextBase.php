@@ -1,11 +1,11 @@
 <?php
 require_once('AbstractSaver.php');
-class SaveToTextBase extends AbstractSaver
+class SaveToBase extends AbstractSaver
 {
     public function writeToBase()
     {
         $basename = "../base/text/".$this -> email. ".txt";  
-        $text = $this -> name ."\n" . $this -> bday . "\n".  $this -> pnumber . "\n" . $this ->email . "\n";   
+        $text ="\n". $this -> name ."\n" . $this -> bday . "\n".  $this -> pnumber . "\n" . $this ->email . "\n";   
         $base = fopen($basename, "w");
         fwrite($base, $text);
         fclose($base);
