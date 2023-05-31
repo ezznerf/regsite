@@ -6,13 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
     <?php
-    require_once("../app/SaveToTextBase.php");
-    $newPerson = new SaveToTextBase();
-    $newPerson -> writeToBase();
+    require_once("../app/SaveToBase.php");
+    $newPerson = new SaveToBase();
+    $newPerson -> writeToTextBase();
     ?>
     <div id="alerts" class="alerts">
         <h2>Сохранение в текстовый файл прошло успешно<h2>
@@ -24,7 +24,7 @@
         </form>
     </div>
     <div id="container2">
-        <form action="reader.php">
+        <form action="readerText.php">
             <button id="btn2">Все пользователи</button>
         </form>
     </div>
