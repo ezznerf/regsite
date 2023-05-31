@@ -5,6 +5,6 @@ abstract class AbstractSaver
     private $bday ;
     private $pnumber;
     private $email;
-    abstract public function writeToBase();
-    abstract public function Messager();
+    abstract public function writeToTextBase();
+    abstract public function writeToSerialBase();
 }
