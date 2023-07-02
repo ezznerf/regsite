@@ -1,4 +1,4 @@
-<?
+<?php
 require_once ("ViewInterface.php");
 class ViewTextUsers implements ViewInterface 
 {
@@ -33,7 +33,12 @@ class ViewTextUsers implements ViewInterface
                 echo "<div class = 'border'";
 
                 foreach($file as $val){
-                    echo unserialize($val). "<br>";
+                    if($val != "\n"){
+                        echo(unserialize($val));
+                        echo '<br>';
+                    }else{
+                        echo '<br>';
+                    }
                     if (stristr($val, '@')){
                         echo "<br>";
                         echo "</div>";
@@ -47,5 +52,9 @@ class ViewTextUsers implements ViewInterface
     }
     public function getDirname(){
         return $this -> dirname;
+    }
+    public function setDirname($dirname){
+        $this->dirname = $dirname;
+        return $this;
     }
 }
