@@ -34,12 +34,6 @@
                 <input type="email" id="email"name="email"
                 placeholder="example@mail.ussr">
             </div>
-            <div id="saver">
-                <select name="save_method" id="save_method">
-                    <option value="text">Сохранинь в текстовом файле</option>
-                    <option value="serialize">Сохранить в сериализованном текстовом файле</option>
-                </select>
-            </div>
             <div id ="btn">
             <input type="submit" value="Регистрация" id="button">
             </div>
@@ -52,8 +46,15 @@
             <a href = "readerSerialize.php">Skip serialize reg</a>
             </div>
             <script src="app.js"></script>
+            <div id="saver">
+                <select name="save_method" id="save_method">
+                    <option value="text">Сохранинь в текстовом файле</option>
+                    <option value="serialize">Сохранить в сериализованном текстовом файле</option>
+                </select>
+            </div>
             
     </div>
+
  
 
 </body>
