@@ -2,12 +2,16 @@
 require_once('AbstractSaver.php');
 class SaveToBase extends AbstractSaver
 {
+    private $name;
+    private $bday ;
+    private $pnumber;
+    private $email;
     public function __construct()
     {
-        $this -> name = $_POST["name"];
-        $this -> bday = $_POST["bday"];
-        $this -> pnumber = $_POST["pnumber"];
-        $this -> email = $_POST["email"];
+        $this->name =$_POST['name'];
+        $this->bday =$_POST['bday'];
+        $this->pnumber =$_POST['pnumber'];
+        $this->email =$_POST['email'];
     }
     public function writeToTextBase()
     {
@@ -27,5 +31,4 @@ class SaveToBase extends AbstractSaver
         fwrite($base, $text);
         fclose($base);
     }
-    
 }
