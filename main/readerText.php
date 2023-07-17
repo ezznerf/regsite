@@ -14,6 +14,7 @@
         </form>
     </div>
 <?php
+// require 
 require_once("../app/ViewTextUsers.php");
 $readinfo = new ViewTextUsers("../base/text/");
 $readinfo -> TextReader();
