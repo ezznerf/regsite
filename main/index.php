@@ -1,4 +1,6 @@
-
+<?php
+require "../app/Database.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
