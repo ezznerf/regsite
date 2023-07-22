@@ -1,6 +1,7 @@
 <?php
+require_once ('DBaseInterface.php');
 
-class DBaseSaver
+class DBaseSaver implements DBaseInterface
 {
    public function SQLSave($uname, $ubday, $uphone, $uemail)
    {

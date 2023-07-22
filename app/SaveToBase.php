@@ -1,11 +1,12 @@
 <?php
 require_once('AbstractSaver.php');
+require_once ('User.php');
 class SaveToBase extends AbstractSaver
 {
-    private $name;
-    private $bday ;
-    private $pnumber;
-    private $email;
+//    private $name;
+//    private $bday ;
+//    private $pnumber;
+//    private $email;
     public function __construct()
     {
         $this->name =$_POST['name'];
@@ -25,8 +26,10 @@ class SaveToBase extends AbstractSaver
 
     public function writeToSerialBase()
     {
-        $basename = "../base/serial/".$this -> email. ".txt";  
-        $text = "\n".serialize($this -> name) ."\n" . serialize($this -> bday) . "\n".  serialize($this -> pnumber) . "\n" . serialize($this ->email) . "\n";   
+        $user = new User($this->name, $this->bday, $this->pnumber, $this->email);
+        $basename = "../base/serial/".$this -> email. ".txt";
+        //$text = "\n".serialize($this -> name) ."\n" . serialize($this -> bday) . "\n".  serialize($this -> pnumber) . "\n" . serialize($this ->email) . "\n";
+        $text = serialize($user);
         $base = fopen($basename, "w");
         fwrite($base, $text);
         fclose($base);

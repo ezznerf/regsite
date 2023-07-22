@@ -1,10 +1,10 @@
 <?php
 abstract class AbstractSaver
 {
-    private $name;
-    private $bday ;
-    private $pnumber;
-    private $email;
+    protected $name;
+    protected $bday ;
+    protected $pnumber;
+    protected $email;
     abstract public function writeToTextBase();
     abstract public function writeToSerialBase();
     public function setName($name){

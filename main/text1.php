@@ -13,13 +13,10 @@
     require_once("../app/SaveToBase.php");
     $newPerson = new SaveToBase();
     $newPerson -> writeToTextBase();
+
     require_once("../app/DBaseSaver.php");
     $newUser = new DBaseSaver();
-    $uname = $_POST['name'];
-    $ubday = $_POST['bday'];
-    $uphone = $_POST['pnumber'];
-    $uemail = $_POST['email'];
-    $newUser->SQLSave("$uname", "$ubday", "$uphone", "$uemail");
+    $newUser->SQLSave($_POST['name'], $_POST['bday'], $_POST['pnumber'], $_POST['email']);
     ?>
     <div id="alerts" class="alerts">
         <h2>Сохранение в текстовый файл прошло успешно<h2>

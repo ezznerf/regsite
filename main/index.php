@@ -45,13 +45,13 @@ require "../app/Database.php";
             <a href = "readerText.php">Skip text reg</a>
             </div>
             <div id="href2">
-            <a href = "readerSerialize.php">Skip serialize reg</a>
+<!--            <a href = "readerSerialize.php">Skip serialize reg</a>-->
             </div>
             <script src="app.js"></script>
             <div id="saver">
                 <select name="save_method" id="save_method">
                     <option value="text">Сохранинь в текстовом файле</option>
-                    <option value="serialize">Сохранить в сериализованном текстовом файле</option>
+<!--                    <option value="serialize">Сохранить в сериализованном текстовом файле</option>-->
                 </select>
             </div>
             
