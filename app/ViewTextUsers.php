@@ -2,7 +2,7 @@
 require_once ("ViewInterface.php");
 class ViewTextUsers implements ViewInterface 
 {
-    private string $dirname;
+    private  $dirname;
     public function __construct(string $dirname){
         $this -> dirname = $dirname;
     }
@@ -47,9 +47,7 @@ class ViewTextUsers implements ViewInterface
             }
         }
     }
-    public function Cout(){
 
-    }
     public function getDirname(){
         return $this -> dirname;
     }

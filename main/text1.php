@@ -23,7 +23,7 @@
     </div>
 
     <div id="container1">
-        <form action="index.php">
+        <form action="registration.php">
             <button id="btn">Вернуться на главную</button>
         </form>
     </div>

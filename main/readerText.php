@@ -9,12 +9,11 @@
 </head>
 <body>
     <div id="btn">
-        <form action="index.php">
+        <form action="registration.php">
             <button id="button">На главную</button>
         </form>
     </div>
 <?php
-// require 
 require_once("../app/ViewTextUsers.php");
 $readinfo = new ViewTextUsers("../base/text/");
 $readinfo -> TextReader();
