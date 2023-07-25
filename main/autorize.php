@@ -12,7 +12,7 @@
 <body>
   <div class="container">
     <h2>Аутентификация</h2>
-    <form class="forma" action="" method="POST" name="forma">
+    <form class="forma" action="personalArea.php" method="POST" name="forma">
         <div class="reg-form">
             <label for="email">EMAIL</label>
             <input type="email" id="email" name="email"
