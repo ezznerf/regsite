@@ -47,9 +47,7 @@ class ViewTextUsers implements ViewInterface
             }
         }
     }
-    public function Cout(){
 
-    }
     public function getDirname(){
         return $this -> dirname;
     }

@@ -9,7 +9,7 @@
 </head>
 <body>
     <div id="btn">
-        <form action="index.php">
+        <form action="registration.php">
             <button id="button">На главную</button>
         </form>
     </div>

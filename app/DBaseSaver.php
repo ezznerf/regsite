@@ -6,7 +6,7 @@ class DBaseSaver
    public function SQLSave($uname, $ubday, $uphone, $uemail)
    {
 
-       $mysql = new mysqli('localhost','root', '', 'regsite');
+       $mysql = new mysqli('localhost','root', 'root', 'regsite');
        $fullName = explode(" ",$uname);
        $name = $fullName[0];
        $surname = $fullName[1];
