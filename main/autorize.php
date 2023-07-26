@@ -28,12 +28,15 @@
             <input type="submit" value="Sing in" id="button">
         </div>
     </form>
-      <form class="result">
         <?php
           session_start();
-          echo $_SESSION['message']
+          if(isset($_SESSION['message']))
+          {
+              echo $_SESSION['message'];
+          }else{
+              echo $_SESSION['message'] = "";
+          }
           ?>
-      </form>
   </div>
 
 </body>

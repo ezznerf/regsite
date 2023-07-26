@@ -22,12 +22,12 @@ class Auth extends SqlBuilder implements AuthInterface
     public function checkUser($login, $password)
     {
         $builder = new SqlBuilder();
-        $mysql = new mysqli('localhost', 'root', '', 'regsite');
+        $mysql = new mysqli('localhost', 'root', 'root', 'regsite');
         $SQL = $builder->select('*')
             ->from('`users`')
             ->where("`email` = '$login' AND `pass` = '$password'")
             ->sqlResult();
-        $connect = mysqli_connect('localhost', 'root', '', 'regsite');
+        $connect = mysqli_connect('localhost', 'root', 'root', 'regsite');
         $mysql = mysqli_query($connect, $SQL);
         $user = mysqli_fetch_assoc($mysql);
         $this->checkResult = $user;
@@ -41,10 +41,10 @@ class Auth extends SqlBuilder implements AuthInterface
             $surname = $user['surname'];
             $patronymic = $user['patronymic'];
             echo "<h2> $surname $patronymic ,Добро пожаловть</h2>";
-            unset($_SESSION['message']);
+            $_SESSION['message'] = NULL;
         }else{
             header('Location:../main/autorize.php');
-            $_SESSION['message'] = "Неправильный логин или пароль!";
+            $_SESSION['message'] = "<form class='result'>Неправильный логин или пароль!</form>";
         }
 
     }
