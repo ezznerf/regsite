@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Russo+One&display=swap');
+body{
+    background: linear-gradient(to bottom left, blue, pink);
+    font-family: 'Bebas Neue', cursive;
+    font-size: 15px;
+    font-family: 'Russo One', sans-serif;
+
+    height: 1000px;
+}
+.container{
+    height: 40em;
+    width: 30em;
+    position: relative;
+    margin:0;
+    background: aliceblue;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+#changeMail{
+    width: 300px;
+    margin-bottom: 10px;
+    margin-left: 75px;
+    margin-top: 60px;
+    padding-bottom: 50px;
+    background-color: rgb(68, 140, 191);
+    border: none;
+    cursor: pointer;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 22px;
+
+    padding: 27px 30px;
+}
+
+#changeMail:hover{
+    opacity: 0.9;
+}
+#changePass{
+    width: 300px;
+    margin-bottom: 10px;
+    margin-left: 75px;
+    margin-top: 60px;
+    padding-bottom: 50px;
+    background-color: rgb(68, 140, 191);
+    border: none;
+    cursor: pointer;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 22px;
+    padding: 27px 30px;
+}
+#changePass:hover{
+    opacity: 0.9;
+}
+#exit{
+    width: 300px;
+    margin-bottom: 10px;
+    margin-left: 75px;
+    margin-top: 60px;
+    padding-bottom: 50px;
+    background-color: rgb(182, 90, 106);
+    border: none;
+    cursor: pointer;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 22px;
+    padding: 27px 30px;
+    
+}
+#exit:hover{
+    opacity: 0.9;
+}
+
+h2{
+    margin-left: 30px;
+    margin-top: 30px;
+}

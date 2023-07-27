@@ -27,14 +27,20 @@
                 placeholder="дд.мм.гггг.">
             </div>
             <div class=reg-form>
-                <label for="pnuber">Номер телефона</label>
+                <label for="pnumber">Номер телефона</label>
                 <input type="text" id="pnumber" name="pnumber"
                 placeholder="+7777777777">
             </div>
             <div class=reg-form>
                 <label for="email">Почта</label>
                 <input type="email" id="email"name="email"
-                placeholder="example@mail.ussr">
+                placeholder="example@mail.ru">
+            </div>
+            <div class="reg-form">
+                <label for="password">Пароль</label>
+                <input type="password" id="password" name="password"
+                placeholder="*************">
+
             </div>
             <div id ="btn">
             <input type="submit" value="Регистрация" id="button">
@@ -42,7 +48,7 @@
         </form>
        
         <div id="href1">
-            <a href = "readerText.php">Skip text reg</a>
+            <!-- <a href = "readerText.php">Skip text reg</a> -->
             </div>
             <div id="href2">
 <!--            <a href = "readerSerialize.php">Skip serialize reg</a>-->
