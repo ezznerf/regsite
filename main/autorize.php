@@ -1,4 +1,7 @@
-
+<?php
+session_start();
+require_once ('../app/Auth.php')
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -29,13 +32,8 @@
         </div>
     </form>
         <?php
-          session_start();
-          if(isset($_SESSION['message']))
-          {
-              echo $_SESSION['message'];
-          }else{
-              echo $_SESSION['message'] = "";
-          }
+          $msg = new Auth();
+          $msg->echoMessage($_SESSION['message']);
           ?>
   </div>
 

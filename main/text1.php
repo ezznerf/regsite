@@ -16,14 +16,14 @@
 
     require_once("../app/DBaseSaver.php");
     $newUser = new DBaseSaver();
-    $newUser->SQLSave($_POST['name'], $_POST['bday'], $_POST['pnumber'], $_POST['email']);
+    $newUser->SQLSave($_POST['name'], $_POST['password'], $_POST['bday'], $_POST['pnumber'], $_POST['email']);
     ?>
     <div id="alerts" class="alerts">
         <h2>Сохранение в текстовый файл прошло успешно<h2>
     </div>
 
     <div id="container1">
-        <form action="registration.php">
+        <form action="index.php">
             <button id="btn">Вернуться на главную</button>
         </form>
     </div>

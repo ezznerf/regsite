@@ -1,9 +1,4 @@
-<!-- <?php
-// require_once ('../app/Auth.php');
-// $userCheck= new Auth();
-// $userCheck->checkUser($_POST['email'], $_POST['password']);
-// $userCheck->viewUser();
-?>  -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,8 +9,12 @@
 </head>
 <body>
     <form class="container">
-    <h2>Анатолий Анатольевич, Добро пожаловать!</h2>
-        
+        <?php
+        require_once ('../app/Auth.php');
+        $userCheck= new Auth();
+        $userCheck->checkUser($_POST['email'], $_POST['password']);
+        $userCheck->viewUser();
+        ?>
     <input type="submit" id="changeMail" value="Изменить почту">
     <input type="submit" id="changePass" value="Изменить пароль">
     <input type="submit" id="exit" value="Выход">
