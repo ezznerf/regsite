@@ -1,4 +1,5 @@
 <?php
+namespace App;
 interface ViewInterface 
 {
     public function TextReader();

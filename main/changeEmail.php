@@ -8,23 +8,18 @@
     <title>Document</title>
 </head>
 <body>
-<form class="forma" action="personalArea.php" method="POST" name="forma">
+<form class="forma" action="success.php" method="POST" name="forma">
     <div class="reg-form">
-        <label for="old_password">Старый пароль</label>
-        <input type="email" id="email" name="email"
+        <label for="oldEmail">Старый почта</label>
+        <input type="email" id="email" name="oldEmail"
                placeholder="Insert your email">
     </div>
     <div class="reg-form">
-        <label for="new_password">Новый пароль</label>
-        <input type="password" id="password" name="password"
-               placeholder="Insert your password">
+        <label for="newEmail">Новый почта</label>
+        <input type="email" id="email" name="newEmail"
+               placeholder="Insert your email">
     </div>
-    <div class="reg-form">
-        <label for="2nd_new_password">Повторите новый пароль</label>
-        <input type="password" id="password" name="password"
-               placeholder="Insert your password">
-    </div>
-    <input type="submit" name="btn" value="изменить пароль">
+    <input type="submit" name="btn" value="изменить почту">
 </form>
 </body>
 </html>

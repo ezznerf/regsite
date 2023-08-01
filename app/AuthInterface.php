@@ -1,5 +1,5 @@
 <?php
-
+namespace App;
 interface AuthInterface
 {
     public function checkUser($login, $password);

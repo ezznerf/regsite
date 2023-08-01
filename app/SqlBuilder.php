@@ -1,5 +1,6 @@
 <?php
-require_once ('SqlBuilderInterface.php');
+namespace App;
+require_once ('../vendor/autoload.php');
 class SqlBuilder implements SqlBuilderInterface
 {
     private $sql;
@@ -29,6 +30,18 @@ class SqlBuilder implements SqlBuilderInterface
     public function limit(string $request):self
     {
         $this->sql.= ' LIMIT ' . $request;
+
+        return $this;
+    }
+    public function update(string $request):self
+    {
+        $this->sql.= ' UPDATE ' . $request;
+
+        return $this;
+    }
+    public function set(string $request):self
+    {
+        $this->sql.= ' SET ' . $request;
 
         return $this;
     }

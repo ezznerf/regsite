@@ -10,12 +10,11 @@
 </head>
 <body>
     <?php
-    require_once("../app/SaveToBase.php");
-    $newPerson = new SaveToBase();
+    require_once("../vendor/autoload.php");
+    $newPerson = new App\SaveToBase();
     $newPerson -> writeToTextBase();
 
-    require_once("../app/DBaseSaver.php");
-    $newUser = new DBaseSaver();
+    $newUser = new App\DBaseSaver();
     $newUser->SQLSave($_POST['name'], $_POST['password'], $_POST['bday'], $_POST['pnumber'], $_POST['email']);
     ?>
     <div id="alerts" class="alerts">

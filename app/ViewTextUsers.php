@@ -1,5 +1,6 @@
 <?php
-require_once ("ViewInterface.php");
+namespace App;
+require_once ('../vendor/autoload.php');
 class ViewTextUsers implements ViewInterface 
 {
     private  $dirname;

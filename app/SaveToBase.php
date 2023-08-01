@@ -1,6 +1,6 @@
 <?php
-require_once('AbstractSaver.php');
-require_once ('User.php');
+namespace App;
+require_once ('../vendor/autoload.php');
 class SaveToBase extends AbstractSaver
 {
 //    private $name;

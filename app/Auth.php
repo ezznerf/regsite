@@ -1,7 +1,7 @@
 <?php
+namespace App;
+require_once ('../vendor/autoload.php');
 session_start();
-require_once ('AuthInterface.php');
-require_once ('SqlBuilder.php');
 class Auth extends SqlBuilder implements AuthInterface
 {
     private $checkResult;
@@ -9,12 +9,11 @@ class Auth extends SqlBuilder implements AuthInterface
     public function checkUser($login, $password)
     {
         $builder = new SqlBuilder();
-        $mysql = new mysqli('localhost', 'root', '', 'regsite');
         $SQL = $builder->select('*')
             ->from('`users`')
             ->where("`email` = '$login' AND `pass` = '$password'")
             ->sqlResult();
-        $connect = mysqli_connect('localhost', 'root', '', 'regsite');
+        $connect = mysqli_connect('localhost', 'root', 'root', 'regsite');
         $mysql = mysqli_query($connect, $SQL);
         $user = mysqli_fetch_assoc($mysql);
         $this->checkResult = $user;
@@ -27,11 +26,13 @@ class Auth extends SqlBuilder implements AuthInterface
             $name = $user['name'];
             $surname = $user['surname'];
             $patronymic = $user['patronymic'];
-            echo "<h2> $surname $patronymic, Добро пожаловть</h2>";
+            echo "<h2> $name $patronymic, Добро пожаловть</h2>";
             $_SESSION['message'] = NULL;
+            header_remove();
         }else{
             header('Location:../main/autorize.php');
-            $_SESSION['message'] = "<form class='result'>Непрный логин или пароль!</form>";
+//            $_SESSION['message'] = "<form class='result'>Непрный логин или пароль!</form>";
+
         }
 
     }

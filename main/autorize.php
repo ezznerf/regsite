@@ -1,7 +1,3 @@
-<?php
-session_start();
-require_once ('../app/Auth.php')
-?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -13,26 +9,27 @@ require_once ('../app/Auth.php')
     <link rel="stylesheet" href="styles/style3.css">
 </head>
 <body>
-  <div class="container">
+<div class="container">
 
     <h2>Аутентификация</h2>
     <form class="forma" action="personalArea.php" method="POST" name="forma">
         <div class="reg-form">
             <label for="email">EMAIL</label>
             <input type="email" id="email" name="email"
-            placeholder="Insert your email">
+                   placeholder="Insert your email">
         </div>
         <div class="reg-form">
             <label for="password">PASSWORD</label>
             <input type="password" id="password" name="password"
-            placeholder="Insert your password">
+                   placeholder="Insert your password">
         </div>
         <div id="btn">
             <input type="submit" value="Sing in" id="button">
         </div>
     </form>
         <?php
-          $msg = new Auth();
+          require_once ('../vendor/autoload.php');
+          $msg = new App\Auth();
           $msg->echoMessage($_SESSION['message']);
           ?>
   </div>

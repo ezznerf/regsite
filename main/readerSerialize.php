@@ -14,8 +14,8 @@
         </form>
     </div>
 <?php
-require_once("../app/ViewTextUsers.php");
-$readinfo = new ViewTextUsers("../base/serial/");
+require_once("../vendor/autoload.php");
+$readinfo = new App\ViewTextUsers("../base/serial/");
 $readinfo -> SerialReader();
 ?>
 </body>
